@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Farro";
   src: url("../assets/fonts/Farro-Light.woff2") format("woff2"),
-       url("../assets/fonts/Farro-Light.woff") format("woff");
+    url("../assets/fonts/Farro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "Francois One";
   src: url("../assets/fonts/FrancoisOne-Regular.woff2") format("woff2"),
-       url("../assets/fonts/FrancoisOne-Regular.woff") format("woff");
+    url("../assets/fonts/FrancoisOne-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,7 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../assets/fonts/PTSans-Regular.woff2") format("woff2"),
-       url("../assets/fonts/PTSans-Regular.woff") format("woff");
+    url("../assets/fonts/PTSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../assets/fonts/PTSans-Italic.woff2") format("woff2"),
-       url("../assets/fonts/PTSans-Italic.woff") format("woff");
+    url("../assets/fonts/PTSans-Italic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -37,7 +37,7 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../assets/fonts/PTSans-Bold.woff2") format("woff2"),
-       url("../assets/fonts/PTSans-Bold.woff") format("woff");
+    url("../assets/fonts/PTSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@
 @font-face {
   font-family: "Staatliches";
   src: url("../assets/fonts/Staatliches-Regular.woff2") format("woff2"),
-       url("../assets/fonts/Staatliches-Regular.woff") format("woff");
+    url("../assets/fonts/Staatliches-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -55,104 +55,151 @@
 @font-face {
   font-family: "Tourney";
   src: url("../assets/fonts/Tourney-SemiBold.woff2") format("woff2"),
-       url("../assets/fonts/Tourney-SemiBold.woff") format("woff");
+    url("../assets/fonts/Tourney-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
-body{
+body {
   font-family: "PT-Regular", sans-serif;
   font-size: 28px;
   line-height: 1.7;
   font-weight: 400;
 }
 
-.container{
+.container {
   max-width: 1220px;
   padding: 0 10px;
   margin: 0 auto;
 }
 
-.header{
+.header {
   padding: 30px 0;
 }
-.nav{
+
+.nav {
   display: flex;
   justify-content: space-between;
 }
 
-.nav__lang{
+.nav__lang {
   font-family: "Tourney", sans-serif;
   font-size: 22px;
   line-height: 0.8;
   margin-right: 20px;
 }
 
-.nav__item{
+.nav__item {
   display: flex;
   gap: 30px;
   align-items: center;
 }
 
-.nav__item-link{
+.nav__item-link {
   font-family: "Staatliches", sans-serif;
   font-size: 22px;
   line-height: 1.2;
   position: relative;
 }
 
-.nav__item-link:not(:last-child)::before{
+.nav__item-link:not(:last-child)::before {
   position: absolute;
   content: '/';
   right: -18px;
 }
 
-.box{
-  padding: 35px 0 35px;
+.content__wrapper {
+  display: flex;
+  gap: 30px
 }
 
-.box__item{
-  padding: 35px 0 35px;
+.content {
+  padding: 70px;
 }
 
-.box__item-title{
+.content__box {
+  width: calc(70% - 30px);
+  counter-reset: chapter;
+}
+
+.content__box-item {
+  counter-increment: chapter;
+}
+
+.content__box-item:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.content__box-item__title {
   display: flex;
   gap: 10px;
   margin-bottom: 40px;
+  padding-top: 20px;
+  position: relative;
 }
 
-.box__title{
+.title {
   font-family: "Francois One", sans-serif;
   font-size: 36px;
   line-height: 1.3;
   text-transform: uppercase;
 }
 
-.box__chapter{
-  font-family: "Farro", sans-serif;
-  font-size: 20px;
-  letter-spacing: 4%;
-  line-height: 1;
-}
 
-.box__line-decoration{
+.content__box-line__decoration {
   text-decoration-line: underline;
 }
 
-.text-mb{
+.text-mb {
   margin-bottom: 40px;
 }
 
-.box__text-bolder{
+.box__text-bolder {
   font-weight: 800;
 }
 
-.box__text-background{
+.box__text-background {
   background-color: #c0c0c0;
   padding: 5px 0;
 }
 
-.box__text-icon{
+.box__text-icon {
   background-image: url();
+}
+
+.content__menu {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  padding: 5px;
+}
+
+.content__menu-link {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.content__box-chapter::after {
+  content: "Chapter " counter(chapter);
+  font-family: "Farro", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1;
+  text-transform: none;
+  display: inline-block;
+  transform: translateY(-20px);
+}
+
+.content__box-title::before {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 8px;
+  background-color: black;
+  top: 0;
+  left: 0;
 }

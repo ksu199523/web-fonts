@@ -23,52 +23,113 @@
         </div>
     </header>
     <main class="main">
-        <div class="container">
-            <div class="box">
-                <div class="box__item">
-                    <div class="box__item-title">
-                        <h2 class="box__title">Introduction</h2>
-                        <span class="box__chapter">Chapter 1</span>
+        <section class="content">
+            <div class="container">
+                <div class="content__wrapper">
+                    <div class="content__menu">
+                        <ul class="content__menu-list">
+                            <li class="content__menu-item">
+                                <a class="content__menu-link title" href="#Introduction">Introduction</a>
+                            </li>
+                        </ul>
+                        <ul class="content__menu-list">
+                            <li class="content__menu-item">
+                                <a class="content__menu-link title" href="#Core">Core components</a>
+                            </li>
+                        </ul>
+                        <ul class="content__menu-list">
+                            <li class="content__menu-item">
+                                <a class="content__menu-link title" href="#react">react fundamentals</a>
+                            </li>
+                        </ul>
+                        <ul class="content__menu-list">
+                            <li class="content__menu-item">
+                                <a class="content__menu-link title" href="#handling">handling text input</a>
+                            </li>
+                        </ul>
                     </div>
-                    <p class="box__text">Welcome to the very start of your React Native journey! If you're looking for
-                        environment setup instructions, they've moved <span class="box__line-decoration">to their own
-                            section.</span> Continue reading for an introduction to the documentation, Native
-                        Components, React, and more!</p>
-                </div>
-                <div class="box__item">
-                    <div class="box__item-title">
-                        <h2 class="box__title">core components</h2>
-                        <span class="box__chapter">Chapter 2</span>
+                    <div class="content__box">
+                        <div class="content__box-item" id="Introduction">
+                            <div class="content__box-item__title">
+                                <h2 class="content__box-title title">Introduction</h2>
+                                <span class="content__box-chapter"></span>
+                            </div>
+                            <p class="content__box-text">Welcome to the very start of your React Native journey! If
+                                you're looking for
+                                environment setup instructions, they've moved <span
+                                    class="content__box-line__decoration">to their own
+                                    section.</span> Continue reading for an introduction to the documentation, Native
+                                Components, React, and more!</p>
+                        </div>
+                        <div class="content__box-item" id="Core">
+                            <div class="content__box-item__title">
+                                <h2 class="content__box-title title">core components</h2>
+                                <span class="content__box-chapter"></span>
+                            </div>
+                            <p class="content__box-text">React Native is an open source framework for building Android
+                                and iOS
+                                applications using React and the app platform’s native capabiles. With React Native, you
+                                use
+                                JavaScript to access your platform’s APIs as well as to describe the appearance and
+                                behavior of
+                                your UI using React components:<i> bundles of reusable, nestable code.</i> You can learn
+                                more about
+                                React in the next section. But first, let’s cover how components work in React Native.
+                            </p>
+                        </div>
+                        <div class="content__box-item" id="react">
+                            <div class="content__box-item__title">
+                                <h2 class="content__box-title title">core components</h2>
+                                <span class="content__box-chapter"></span>
+                            </div>
+                            <p class="content__box-text text-mb">React Native runs on <span
+                                    class="content__box-line__decoration">React</span>, a popular open source library
+                                for building user interfaces with JavaScript. To make the most of React Native, it helps
+                                to understand React itself. This section can get you started or can serve as a refresher
+                                course.</p>
+                            <p class="content__box-text text-mb">We’re going to cover the core concepts behind React:
+                            </p>
+                            <p class="content__box-text text-mb"><span class="content__box-text-bolder">+ components.
+                                </span>The rest of this introduction to React uses cats in its examples: friendly,
+                                approachable creatures that need names and a cafe to work in./p>
+                            <p class="content__box-text text-mb"><span class="content__box-text-bolder">+ JSX.
+                                </span>React and React Native use JSX, a syntax that lets you write elements inside
+                                JavaScript like so: <span class="content__box-text-background">
+                                    < Text>Hello, I am your cat!< /Text>.
+                                </span></p>
+                            <p class="content__box-text text-mb">The React docs have <span
+                                    class="content__box-line__decoration">a comprehensive guide to JSX</span> you can
+                                refer to learn even more. Because JSX is JavaScript, you can use variables inside it.
+                                Here you are declaring a <span class="content__box-text-background">name </span>for the
+                                cat, name, and embedding it with curly braces inside <span
+                                    class="content__box-text-background">
+                                    < Text>
+                                </span></p>
+                            <p class="content__box-text text-mb"><span class="content__box-text-bolder">+ props.
+                                </span>Props is short for “properties”. </p>
+                            <p class="content__box-text"><span class="content__box-text-bolder">+ state. </span>While
+                                you can think of props as arguments you use to configure how components render, state is
+                                like a component’s personal data storage. State is useful for handling data that changes
+                                over time or that comes from user interaction. State gives your components memory!</p>
+                        </div>
+                        <div class="content__box-item" id="handling">
+                            <div class="content__box-item__title">
+                                <h2 class="content__box-title title">handling text input</h2>
+                                <span class="content__box-chapter"></span>
+                            </div>
+                            <p class="content__box-text text-mb">TextInput is a Core Component that allows the user to
+                                enter text. It has an <i>onChangeText</i> prop that takes a function to be called every
+                                time the text changed, and an onSubmitEditing prop that takes a function to be called
+                                when the text is submitted.</p>
+                            <p class="content__box-text">For example, let's say that as the user types, you're
+                                translating their words into a different language. In this new language, every single
+                                word is written the same way:🍕. So the sentence "Hello there Bob" would be translated
+                                as "🍕🍕</p>
+                        </div>
                     </div>
-                    <p class="box__text">React Native is an open source framework for building Android and iOS
-                        applications using React and the app platform’s native capabiles. With React Native, you use
-                        JavaScript to access your platform’s APIs as well as to describe the appearance and behavior of
-                        your UI using React components:<i> bundles of reusable, nestable code.</i> You can learn more about
-                        React in the next section. But first, let’s cover how components work in React Native.</p>
-                </div>
-                <div class="box__item">
-                    <div class="box__item-title">
-                        <h2 class="box__title">core components</h2>
-                        <span class="box__chapter">Chapter 3</span>
-                    </div>
-                    <p class="box__text text-mb">React Native runs on <span class="box__line-decoration">React</span>, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve as a refresher course.</p>
-                    <p class="box__text text-mb">We’re going to cover the core concepts behind React:</p>
-                    <p class="box__text text-mb"><span class="box__text-bolder">+ components. </span>The rest of this introduction to React uses cats in its examples: friendly, approachable creatures that need names and a cafe to work in./p>
-                    <p class="box__text text-mb"><span class="box__text-bolder">+ JSX. </span>React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so: <span class="box__text-background">< Text>Hello, I am your cat!< /Text>.</span></p>
-                    <p class="box__text text-mb">The React docs have <span class="box__line-decoration">a comprehensive guide to JSX</span> you can refer to learn even more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a <span class="box__text-background">name </span>for the cat, name, and embedding it with curly braces inside <span class="box__text-background">< Text ></span></p>
-                    <p class="box__text text-mb"><span class="box__text-bolder">+ props. </span>Props is short for “properties”. </p>
-                    <p class="box__text"><span class="box__text-bolder">+ state. </span>While you can think of props as arguments you use to configure how components render, state is like a component’s personal data storage. State is useful for handling data that changes over time or that comes from user interaction. State gives your components memory!</p>             
-                </div>
-                    <div class="box__item">
-                    <div class="box__item-title">
-                        <h2 class="box__title">handling text input</h2>
-                        <span class="box__chapter">Chapter 4</span>
-                    </div>
-                    <p class="box__text text-mb">TextInput is a Core Component that allows the user to enter text. It has an <i>onChangeText</i> prop that takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a function to be called when the text is submitted.</p>
-                     <p class="box__text">For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way:🍕. So the sentence "Hello there Bob" would be translated as "🍕🍕</p>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 </body>
 
