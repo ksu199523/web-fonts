@@ -76,6 +76,12 @@ body {
 
 .header {
   padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
 }
 
 .nav {
@@ -111,17 +117,28 @@ body {
 
 .content__wrapper {
   display: flex;
-  gap: 30px
+  gap: 30px;
+  align-items: flex-start;
+  z-index: 10;
 }
 
 .content {
   padding: 70px;
+  padding-top: 184px;
+  background-image: url("../assets/img/bg.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-position: right 164px;
 }
 
 .content__box {
   width: calc(70% - 30px);
   counter-reset: chapter;
+  z-index: 10;
 }
+
+
 
 .content__box-item {
   counter-increment: chapter;
@@ -174,6 +191,8 @@ body {
   flex-direction: column;
   gap: 70px;
   padding: 5px;
+  position: sticky;
+  top: 114px;
 }
 
 .content__menu-link {
